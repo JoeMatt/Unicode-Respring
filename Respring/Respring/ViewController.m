@@ -29,7 +29,7 @@ NSString *kCrashString = @"\u0635\u0651\u0628\u064f\u0631\u0631\u064b \u0963 \u0
 
 -(IBAction)crashMe:(id)sender{
     //    This will crash the app immediatly
-    self.label.text = kCrashString;
+    self.label.text = [NSString stringWithFormat:@"\t\t\t\t%@",kCrashString];
 }
 
 -(IBAction)respring:(id)sender {
