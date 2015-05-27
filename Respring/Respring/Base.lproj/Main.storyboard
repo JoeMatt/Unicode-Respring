@@ -16,14 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="effective.  Power لُلُصّبُلُلصّبُررً ॣ ॣh ॣ ॣ 冗" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIw-Zd-cJV">
-                                <rect key="frame" x="150" y="289" width="299" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="effective.  Power لُلُصّبُلُلصّبُررً ॣ ॣh ॣ ॣ 冗" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIw-Zd-cJV">
+                                <rect key="frame" x="150" y="220" width="299" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6v-3y-3He">
+                                <rect key="frame" x="249" y="367" width="102" height="30"/>
+                                <state key="normal" title="Send message">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kx2-0U-Wsw"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqY-68-Rak">
-                                <rect key="frame" x="269" y="344" width="62" height="30"/>
+                                <rect key="frame" x="269" y="295" width="62" height="30"/>
                                 <state key="normal" title="Respring">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -35,11 +44,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="eqY-68-Rak" secondAttribute="centerX" id="3mY-Um-lwF"/>
-                            <constraint firstItem="eqY-68-Rak" firstAttribute="top" secondItem="lIw-Zd-cJV" secondAttribute="bottom" constant="34" id="NzA-Pg-G3o"/>
-                            <constraint firstItem="lIw-Zd-cJV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="269" id="cIJ-xY-yr0"/>
+                            <constraint firstItem="eqY-68-Rak" firstAttribute="top" secondItem="lIw-Zd-cJV" secondAttribute="bottom" constant="54" id="NzA-Pg-G3o"/>
+                            <constraint firstAttribute="centerX" secondItem="J6v-3y-3He" secondAttribute="centerX" id="UtG-sU-2S3"/>
+                            <constraint firstItem="lIw-Zd-cJV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="cIJ-xY-yr0"/>
                             <constraint firstAttribute="centerX" secondItem="lIw-Zd-cJV" secondAttribute="centerX" id="mDm-xY-ius"/>
+                            <constraint firstItem="J6v-3y-3He" firstAttribute="top" secondItem="eqY-68-Rak" secondAttribute="bottom" constant="42" id="of1-Hy-2zo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="lIw-Zd-cJV" id="d1j-qF-MbS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
