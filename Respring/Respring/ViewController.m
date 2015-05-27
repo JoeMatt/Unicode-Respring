@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 
-NSString *kCrashString = @" effective.\nPower\n\u0644\u064f\u0644\u064f\u0635\u0651\u0628\u064f\u0644\u064f\u0644\u0635\u0651\u0628\u064f\u0631\u0631\u064b \u0963 \u0963h \u0963 \u0963\n\u5197";
+NSString *kCrashString = @"\u0644\u064f\u0644\u064f\u0635\u0651\u0628\u064f\u0644\u064f\u0644\u0635\u0651\u0628\u064f\u0631\u0631\u064b \u0963 \u0963h \u0963 \u0963\n\u5197";
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *label;
