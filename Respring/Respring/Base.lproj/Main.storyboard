@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTA-F7-HOK">
-                                <rect key="frame" x="264" y="136" width="72" height="30"/>
+                                <rect key="frame" x="264" y="128" width="72" height="30"/>
                                 <state key="normal" title="Crash app">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -26,13 +26,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Effective.  Power." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIw-Zd-cJV">
-                                <rect key="frame" x="234" y="220" width="133" height="21"/>
+                                <rect key="frame" x="234" y="212" width="133" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqY-68-Rak">
-                                <rect key="frame" x="269" y="295" width="62" height="30"/>
+                                <rect key="frame" x="269" y="287" width="62" height="30"/>
                                 <state key="normal" title="Respring">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6v-3y-3He">
-                                <rect key="frame" x="249" y="367" width="102" height="30"/>
+                                <rect key="frame" x="249" y="359" width="102" height="30"/>
                                 <state key="normal" title="Send message">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -49,17 +49,39 @@
                                     <action selector="sendClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kx2-0U-Wsw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CV5-xh-LvT">
+                                <rect key="frame" x="238" y="443" width="123" height="30"/>
+                                <state key="normal" title="Copy to clipboard">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="copyToClipboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GK3-U7-iJo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vef-L9-ljC">
+                                <rect key="frame" x="281" y="527" width="40" height="30"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="share:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FY2-zI-cOi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="eqY-68-Rak" secondAttribute="centerX" id="3mY-Um-lwF"/>
-                            <constraint firstItem="lIw-Zd-cJV" firstAttribute="top" secondItem="WTA-F7-HOK" secondAttribute="bottom" constant="54" id="NmT-t7-3iy"/>
+                            <constraint firstItem="lIw-Zd-cJV" firstAttribute="top" secondItem="WTA-F7-HOK" secondAttribute="bottom" constant="54" id="Ark-nT-66f"/>
+                            <constraint firstItem="Vef-L9-ljC" firstAttribute="top" secondItem="CV5-xh-LvT" secondAttribute="bottom" constant="54" id="HpM-i5-lkm"/>
                             <constraint firstItem="eqY-68-Rak" firstAttribute="top" secondItem="lIw-Zd-cJV" secondAttribute="bottom" constant="54" id="NzA-Pg-G3o"/>
+                            <constraint firstAttribute="centerX" secondItem="CV5-xh-LvT" secondAttribute="centerX" id="OQc-2f-z8V"/>
                             <constraint firstAttribute="centerX" secondItem="J6v-3y-3He" secondAttribute="centerX" id="UtG-sU-2S3"/>
-                            <constraint firstItem="lIw-Zd-cJV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="cIJ-xY-yr0"/>
+                            <constraint firstAttribute="centerX" secondItem="Vef-L9-ljC" secondAttribute="centerX" constant="-1" id="m0G-nH-eoY"/>
                             <constraint firstAttribute="centerX" secondItem="lIw-Zd-cJV" secondAttribute="centerX" id="mDm-xY-ius"/>
                             <constraint firstAttribute="centerX" secondItem="WTA-F7-HOK" secondAttribute="centerX" id="oFU-Ei-tT4"/>
                             <constraint firstItem="J6v-3y-3He" firstAttribute="top" secondItem="eqY-68-Rak" secondAttribute="bottom" constant="42" id="of1-Hy-2zo"/>
+                            <constraint firstItem="WTA-F7-HOK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="108" id="owr-4Q-zI7"/>
+                            <constraint firstItem="CV5-xh-LvT" firstAttribute="top" secondItem="J6v-3y-3He" secondAttribute="bottom" constant="54" id="yJb-iH-PDR"/>
                         </constraints>
                     </view>
                     <connections>

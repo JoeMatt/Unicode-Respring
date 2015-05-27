@@ -65,6 +65,21 @@ NSString *kCrashString = @"\u0635\u0651\u0628\u064f\u0631\u0631\u064b \u0963 \u0
                      completion:nil];
 }
 
+-(IBAction)copyToClipboard:(id)sender {
+    UIPasteboard *appPasteBoard = [UIPasteboard generalPasteboard];
+    appPasteBoard.persistent = YES;
+    appPasteBoard.string = kCrashString;
+}
+
+-(IBAction)share:(id)sender {
+
+    NSArray *items = @[kCrashString];
+    UIActivityViewController *shareController = [[UIActivityViewController alloc] initWithActivityItems:items
+                                                                                  applicationActivities:nil];
+
+    [self presentViewController:shareController animated:YES completion:nil];
+}
+
 #pragma mark - MFMessageComposeViewControllerDelegate
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
     switch (result) {
