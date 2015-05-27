@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 
-NSString *kCrashString = @"\u0644\u064f\u0644\u064f\u0635\u0651\u0628\u064f\u0644\u064f\u0644\u0635\u0651\u0628\u064f\u0631\u0631\u064b \u0963 \u0963h \u0963 \u0963\n\u5197";
+NSString *kCrashString = @"\u0635\u0651\u0628\u064f\u0631\u0631\u064b \u0963 \u0963h \u0963 \u0963\n\u5197";
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *label;
@@ -20,14 +20,16 @@ NSString *kCrashString = @"\u0644\u064f\u0644\u064f\u0635\u0651\u0628\u064f\u064
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-//    This will crash the app immediatly
-//    self.label.text = kCrashString;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)crashMe:(id)sender{
+    //    This will crash the app immediatly
+    self.label.text = kCrashString;
 }
 
 -(IBAction)respring:(id)sender {
